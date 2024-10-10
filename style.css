@@ -1,0 +1,271 @@
+/* global styling */
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #DDF2FD;
+}
+
+h1{
+    font-size: 3rem;
+    color: #fff;
+}
+
+section h2{
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+}
+
+/* nav bar styling */
+header{
+    background-color: #164863;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header p {
+    font-size: 1.5rem;
+    color:#fff;
+    margin-left: 3rem;
+}
+header nav ul{
+    display: flex;
+    justify-content: end;
+    margin: 0 3rem;
+    padding: 0;
+}
+
+header li{
+    list-style: none;
+    margin: 2rem;
+    background-color: #164863;
+}
+
+header li a{
+    text-decoration-line: none;
+    font-size:  1.5rem;
+    font-weight: 700;
+    color: #fff;
+    
+}
+
+header li a:hover{
+    color: #DDF2FD;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    padding: 0; 
+}
+
+li{
+    background-color: #9BBEC8;
+    border-radius: 5px;
+    width:fit-content;
+    padding: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+/* hero styling */
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    background-color:  #427D9D;
+    margin: 1rem 10rem;
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: fit-content;
+}
+
+.hero-text{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-right: 5rem;
+    flex-wrap: wrap;
+    border-radius:  5px;
+    height: 15rem;
+    width: 21rem;
+    color: #fff;
+}
+
+.hero-text h1{
+    width: 15rem;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0px;
+}
+.hero-text p {
+    width: 20rem;
+    text-align: left;
+}
+
+.hero-image img{
+    height: 20rem;
+    width: auto;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 1086px){
+    .hero-image img{
+        height: 10rem;
+    }
+}
+
+@media only screen and (max-width: 936px){
+    .hero{
+        flex-wrap:wrap-reverse;
+        margin: 1rem 10%;
+    }
+    .hero-text{
+        margin: 0;
+        height: auto;
+    }
+}
+
+/* Portfolio */
+.portfolio-overview{
+    display:flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-overview a{
+    text-decoration: none;
+}
+
+.portfolio-project{
+    height: 360px;
+    width: 15rem;
+    background-color: #427D9D;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.portfolio-project:hover{
+    box-shadow: 5px 5px #164863;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: -5px;
+}
+
+.portfolio-project-text{
+    color:#fff;
+    margin: 1rem;
+}
+
+.portfolio-project-text h3{
+    text-align: center;
+    font-size:  1.5rem;
+}
+
+.portfolio-project-text h4{
+    margin: 1rem 0;
+}
+
+.portfolio-project-text ul{
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    padding: 0; 
+}
+
+.portfolio-project-text li{
+    background-color: #9BBEC8;
+    border-radius: 5px;
+    width:fit-content;
+    padding: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+/* Certifications */
+
+.certifications{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.specific-certification{
+    width: 80%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    background-color: #427D9D;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.certification-detail{
+    color:#fff;
+    padding-right: 1rem;
+}
+
+.certification-detail h3{
+    margin-bottom: 0;
+}
+
+.certification-detail aside{
+    color: rgba(210, 209, 209, 0.846);
+}
+
+.certification-certificate img{
+    width: 350px;
+    height: auto;
+}
+
+@media only screen and (max-width: 848px){
+    .certification-certificate img{
+        display: none;
+    }
+}
+
+/* contact */
+
+.contact{
+    margin: 5rem 10rem;
+    background-color:  #427D9D;
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: fit-content;
+    text-align: center;
+    color: #fff;
+}
+
+.contact h1{
+    width: 100%
+}
+
+.social-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.social-links img{
+    width: 6rem;
+}
+
+.social-links a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fff;
+}
