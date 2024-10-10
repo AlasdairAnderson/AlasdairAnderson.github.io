@@ -1,10 +1,124 @@
-<! DOCTYPE html>
-<html>
-
+<!DOCTYPE html>
+<head>
+    <title>A Anderson</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet"/>
+</head>
 <body>
-  <h1>Alasdair Anderson </h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+    <header>
+        <p>Alasdair Anderson</p>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>About Me</h1>
+                <p>Hi I am Alasdair. I am currently working in the automotive industry, working on the digitalisation of the fire and security departement.</p>
+                <p>Fun fact this page has been live for <span id="secondsLive">0</span> seconds!</p>
+            </div>
+            <div class="hero-image">
+                <img alt="Headshot of Alasdair Anderson" src="./resources/photos/ProfilePic.jpeg">
+            </div>
+        </section>
+        <section class="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-overview">
+                <a href="https://github.com/AlasdairAnderson/Finance_CSV_Formatter" target="_blank">
+                    <div class="portfolio-project">
+                        <div class="portfolio-project-text">
+                            <h3>Finance CSV Formatter</h3>
+                            <h4>Overview</h4>
+                            <p>A personal finance CSV formatter using python, to convert bank statement CSV files to a CSV format that can be interprated and uploaded to the Denaro finance tracking software.
+                            <br>
+                            This project currently supports the CSV formats for Monzon, Barcleys, and Amex.</p>
+                            <h4>Requirements</h4>
+                            <ul>
+                                <li>Python</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/AlasdairAnderson/CS50-Final-Project" target="_blank">
+                    <div class="portfolio-project">
+                        <div class="portfolio-project-text">
+                            <h3>Drone Stitch</h3>
+                            <h4>Overview</h4>
+                            <p>This porject is part of Harvards CS50's Introduction to Computer Science. This final project is a web application designed for drone operators to upload multiple topdown site survey photos to be stitched togther to make larger panoramic picture.</p>
+                            <h4>Requirements</h4>
+                            <ul>
+                                <li>Python</li>
+                                <li>OpenCV</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/AlasdairAnderson/MixedMessages" target="_blank">
+                    <div class="portfolio-project">
+                        <div class="portfolio-project-text">
+                            <h3>Mixed Messages</h3>
+                            <h4>Overview</h4>
+                            <p>For this project I have build a message genarator program. Every time a user runs a program, they should get a new, randomised output. The message that is output must be made up of at least three different pieves of data.</p>
+                            <h4>Requirements</h4>
+                            <ul>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="certifications">
+            <h2>Certifications</h2>
+            <div class="specific-certification">
+                <div class="certification-detail">
+                    <h3>CS50 Introduction to Computer Science</h3>
+                    <aside>Harvard University<br>Febuary 2024</aside>
+                    <p>This 11 week course provides a broad understanding of computer science, focusing on how to think algorithmically and how to solve programming problems efficiently. Covering concepts like abstraction,algorithms, data structures, encapsulation, resource management, security, software engineering, and web development.</p>
+                    <ul class="programming-languages">
+                        <li>C</li>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>JavaScript</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+                <div class="certification-certificate">
+                    <a href="https://certificates.cs50.io/d21ef70c-9d8a-452f-849f-f1680e64f04b.pdf?size=letter"><img src="./resources/photos/CS50x.png"></a>
+                </div>
+            </div>
+            <div class="specific-certification">
+                <div class="certification-detail">
+                    <h3>Learn JavaScript Course</h3>
+                    <aside>Codecademy<br>March 2024</aside>
+                    <p>This course provides an indepth introduction JavaScript. The syllabus covered conditionals, functions, scope, arrays, loops, and objects.</p>
+                    <ul class="programming-languages">
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="certification-certificate">
+                    <a href="https://www.codecademy.com/profiles/AlasdairAnderson/certificates/705dcb15de0da4dd9d9fc4f3274b430e"><img src="./resources/photos/JavaScript.png"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const timeContainer = document.getElementById("secondsLive");
+        const publishDay = "09/10/2024";
+        const publishDayDate = new Date(publishDay);
+        const intlNumberFormatter = new Intl.NumberFormat("en-UK");
+        setInterval(() => {
+           const now = new Date();
+           const difference = Math.floor( 
+            (now.getTime() - publishDayDate.getTime()) / 1000
+            );
+           timeContainer.innerText = intlNumberFormatter.format(difference); 
+        }, 1000);
+    </script>
 </body>
-
 </html>
